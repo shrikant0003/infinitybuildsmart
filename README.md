@@ -13,12 +13,12 @@ A static HTML/CSS/JS site — no build step or framework required.
 │   └── style.css   # All styles
 ├── js/
 │   └── main.js     # Nav toggle, scroll header, stat counters, contact form handling
-├── images/         # Local image assets (currently empty — gallery/logo are hotlinked, see below)
+├── images/         # Logo, hero, and project gallery images (self-hosted)
 ├── CNAME           # Custom domain for GitHub Pages
 └── LICENSE         # MIT License
 ```
 
-> Note: fonts are loaded from Google Fonts (CDN), and gallery/logo images currently reference Hostinger's asset CDN. There are no local `fonts/` or `assets/` folders yet since no local font or asset files exist — add them here and update the references in `index.html`/`css/style.css` if you want everything self-hosted.
+> Note: fonts are loaded from Google Fonts (CDN). All logo/hero/gallery images are self-hosted in `images/`. There's no local `fonts/` or `assets/` folder since no local font files exist — add one if you want fonts self-hosted too.
 
 ## Local development
 
