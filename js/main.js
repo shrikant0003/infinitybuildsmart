@@ -42,6 +42,17 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 stats.forEach(stat => statsObserver.observe(stat));
 
+// Hero background carousel
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let activeSlide = 0;
+  setInterval(() => {
+    heroSlides[activeSlide].classList.remove('active');
+    activeSlide = (activeSlide + 1) % heroSlides.length;
+    heroSlides[activeSlide].classList.add('active');
+  }, 5000);
+}
+
 // Scroll-reveal animation
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {

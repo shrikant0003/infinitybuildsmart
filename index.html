@@ -90,7 +90,12 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg" style="background-image:url('images/hero.jpg')"></div>
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('images/hero.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/project-2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/project-4.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/project-6.jpg')"></div>
+    </div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <p class="eyebrow">Trusted Construction &amp; Development Partner — Belagavi, Karnataka</p>
@@ -319,12 +324,36 @@
       <p class="section-eyebrow center reveal">Our Work</p>
       <h2 class="section-title center reveal">Explore our construction projects and achievements</h2>
       <div class="gallery-grid">
-        <img class="reveal" src="images/project-1.jpg" alt="Construction project 1" loading="lazy">
-        <img class="reveal" src="images/project-2.jpg" alt="Construction project 2" loading="lazy">
-        <img class="reveal" src="images/project-3.jpg" alt="Construction project 3" loading="lazy">
-        <img class="reveal" src="images/project-4.jpg" alt="Construction project 4" loading="lazy">
-        <img class="reveal" src="images/project-5.jpg" alt="Construction project 5" loading="lazy">
-        <img class="reveal" src="images/project-6.jpg" alt="Construction project 6" loading="lazy">
+        <div class="gallery-card reveal">
+          <span class="gallery-num">01</span>
+          <img src="images/project-1.jpg" alt="Residential construction project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Residential Construction</h3><p>Belagavi, Karnataka</p></div>
+        </div>
+        <div class="gallery-card reveal">
+          <span class="gallery-num">02</span>
+          <img src="images/project-2.jpg" alt="Commercial interior fit-out project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Commercial Interior Fit-Out</h3><p>Belagavi, Karnataka</p></div>
+        </div>
+        <div class="gallery-card reveal">
+          <span class="gallery-num">03</span>
+          <img src="images/project-3.jpg" alt="Structural construction project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Structural Construction</h3><p>Belagavi, Karnataka</p></div>
+        </div>
+        <div class="gallery-card reveal">
+          <span class="gallery-num">04</span>
+          <img src="images/project-4.jpg" alt="Interior design and execution project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Interior Design &amp; Execution</h3><p>Belagavi, Karnataka</p></div>
+        </div>
+        <div class="gallery-card reveal">
+          <span class="gallery-num">05</span>
+          <img src="images/project-5.jpg" alt="Site development project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Site Development</h3><p>Belagavi, Karnataka</p></div>
+        </div>
+        <div class="gallery-card reveal">
+          <span class="gallery-num">06</span>
+          <img src="images/project-6.jpg" alt="Civil and infrastructure works project in Belagavi" loading="lazy">
+          <div class="gallery-caption"><h3>Civil &amp; Infrastructure Works</h3><p>Belagavi, Karnataka</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -333,25 +362,34 @@
   <section class="team" id="team">
     <div class="container">
       <p class="section-eyebrow center reveal">Meet the Experts</p>
-      <h2 class="section-title center reveal">Our Team</h2>
-      <div class="team-grid">
-        <div class="team-card reveal">
-          <div class="team-avatar">SK</div>
-          <h3>Mr. Sudheer R. Kinekar</h3>
-          <p class="team-role">Founder &amp; Principal Consultant — Architect and Consultant</p>
-          <p class="team-bio">Mr. Sudheer R. Kinekar, Founder and Principal Consultant at Infinity Construction &amp; Developers, is the guiding force behind the company's vision and excellence. With extensive experience in architecture and project planning, he combines innovation, functionality, and sustainability to deliver designs that balance aesthetics with structural integrity. His leadership and commitment to quality have been instrumental in shaping Infinity's reputation as a trusted name in construction and development.</p>
+      <h2 class="section-title center reveal">About Infinity Developers Team</h2>
+      <div class="team-rows">
+        <div class="team-row reveal">
+          <div class="team-photo">
+            <img src="images/team-kinekar.jpg" alt="Mr. Sudheer R. Kinekar">
+          </div>
+          <div class="team-info">
+            <h3>Architect &amp; Consultant — Mr. Sudheer R. Kinekar</h3>
+            <p><strong>Mr. Sudheer R. Kinekar</strong>, Founder and Principal Consultant at <strong>Infinity Construction &amp; Developers</strong>, is the guiding force behind the company's vision and excellence. With extensive experience in architecture and project planning, he combines innovation, functionality, and sustainability to deliver designs that balance aesthetics with structural integrity. His leadership and commitment to quality have been instrumental in shaping Infinity's reputation as a trusted name in construction and development.</p>
+          </div>
         </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">VP</div>
-          <h3>Mr. Vijender Patil</h3>
-          <p class="team-role">Structural Consultant</p>
-          <p class="team-bio">At Infinity Construction &amp; Developers, Mr. Vijender Patil serves as our trusted structural consultant, ensuring every project is built on precision, safety, and strength. With deep expertise in modern design and engineering standards, he delivers structural solutions that are efficient, durable, and built to exceed quality expectations.</p>
+        <div class="team-row team-row--reverse reveal">
+          <div class="team-photo">
+            <img src="images/team-patil.jpg" alt="Mr. Vijender Patil">
+          </div>
+          <div class="team-info">
+            <h3>Structural Consultant — Mr. Vijender Patil</h3>
+            <p>At <strong>Infinity Construction &amp; Developers</strong>, <strong>Mr. Vijender Patil</strong> serves as our trusted structural consultant, ensuring every project is built on precision, safety, and strength. With deep expertise in modern design and engineering standards, he delivers structural solutions that are efficient, durable, and built to exceed quality expectations.</p>
+          </div>
         </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">AP</div>
-          <h3>Mr. Ajith Pathak</h3>
-          <p class="team-role">Interior Designer</p>
-          <p class="team-bio">At Infinity Construction &amp; Developers, Mr. Ajith Pathak brings creativity and precision together to craft interiors that are both functional and inspiring. With a keen eye for detail and a passion for modern design, he transforms spaces into elegant, comfortable environments that reflect our clients' lifestyles and aspirations.</p>
+        <div class="team-row reveal">
+          <div class="team-photo">
+            <img src="images/team-pathak.jpg" alt="Mr. Ajith Pathak">
+          </div>
+          <div class="team-info">
+            <h3>Interior Designer — Mr. Ajith Pathak</h3>
+            <p>At <strong>Infinity Construction &amp; Developers</strong>, <strong>Mr. Ajith Pathak</strong> brings creativity and precision together to craft interiors that are both functional and inspiring. With a keen eye for detail and a passion for modern design, he transforms spaces into elegant, comfortable environments that reflect our clients' lifestyles and aspirations.</p>
+          </div>
         </div>
       </div>
     </div>
