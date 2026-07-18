@@ -90,9 +90,11 @@ sections.forEach(section => sectionObserver.observe(section));
 // Contact form (static hosting: no backend, so just confirm client-side)
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  formNote.textContent = `Thanks${name ? ', ' + name : ''}! To finish sending this, connect the form to Formspree/EmailJS or Hostinger's form handler — see deployment notes.`;
-  form.reset();
-});
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    formNote.textContent = `Thanks${name ? ', ' + name : ''}! To finish sending this, connect the form to Formspree/EmailJS or Hostinger's form handler — see deployment notes.`;
+    form.reset();
+  });
+}
