@@ -533,15 +533,16 @@ section{padding:90px 0;}
 .page-banner-sub{color:#c9d0dc;max-width:560px;}
 .plans{background:#fff;}
 .plan-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
+  columns:2;
+  column-gap:28px;
 }
 .plan-card{
   background:var(--gray-50);
   border-radius:var(--radius);
   overflow:hidden;
   box-shadow:var(--shadow);
+  break-inside:avoid;
+  margin:0 0 28px;
 }
 .plan-card img{
   display:block;
