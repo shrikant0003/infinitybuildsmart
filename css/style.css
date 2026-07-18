@@ -76,7 +76,7 @@ ul{list-style:none;}
 }
 .logo{display:flex;align-items:center;gap:10px;}
 .logo img{height:40px;width:auto;border-radius:6px;}
-.logo-text{color:#fff;font-weight:700;font-size:1.05rem;}
+.logo-text{color:#fff;font-weight:700;font-size:1.05rem;line-height:1.25;}
 .logo-text em{font-style:normal;color:var(--amber);}
 .main-nav{display:flex;gap:28px;}
 .main-nav a{
@@ -132,39 +132,73 @@ ul{list-style:none;}
   padding-top:100px;
   max-width:760px;
 }
+.hero-text-block{
+  border-left:3px solid var(--amber);
+  padding-left:24px;
+  margin-bottom:26px;
+  animation:heroFadeIn .8s ease both;
+}
+@keyframes heroFadeIn{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:none;}
+}
 .eyebrow{
   text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:0.8rem;
-  font-weight:600;
+  letter-spacing:1.6px;
+  font-size:0.78rem;
+  font-weight:700;
   color:var(--amber);
-  margin-bottom:14px;
+  margin-bottom:16px;
+  line-height:1.6;
 }
+.eyebrow-dash{
+  display:inline-block;
+  width:22px;height:2px;
+  margin-right:10px;
+  margin-bottom:2px;
+  background:var(--amber);
+}
+.eyebrow-sep{margin:0 2px;opacity:0.6;font-weight:400;}
 .hero h1{
   font-size:clamp(1.9rem, 3.6vw, 2.75rem);
   font-weight:800;
-  line-height:1.2;
-  margin-bottom:16px;
+  line-height:1.22;
+  margin-bottom:18px;
+  text-shadow:0 2px 18px rgba(0,0,0,0.35);
 }
+.hero h1 .highlight{color:var(--amber);}
 .hero-lead{
-  font-size:clamp(1rem, 2vw, 1.15rem);
-  color:#dfe4ee;
-  max-width:600px;
-  margin-bottom:20px;
+  font-size:clamp(1rem, 2vw, 1.12rem);
+  font-weight:400;
+  color:#e7ebf3;
+  max-width:560px;
+  line-height:1.7;
 }
-.hero-motto{
-  display:inline-block;
-  font-size:0.95rem;
-  font-weight:700;
-  color:var(--navy);
-  background:var(--amber);
-  padding:6px 16px;
-  border-radius:999px;
-  margin-bottom:28px;
-  letter-spacing:0.5px;
-}
-.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px;margin-bottom:32px;}
 .hero-rating{display:flex;align-items:center;gap:10px;font-size:0.95rem;opacity:0.9;}
+.hero-tagline-footer{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:48px;
+  padding:12px 24px;
+  background:var(--amber);
+  color:var(--navy);
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  font-size:1.15rem;
+  letter-spacing:0.8px;
+  border-radius:999px;
+  box-shadow:0 10px 26px rgba(224,138,44,0.4);
+}
+.hero-tagline-footer::before{
+  content:"";
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--navy);
+  display:inline-block;
+  flex-shrink:0;
+}
 .stars{color:var(--amber);letter-spacing:2px;}
 
 /* Stats */
