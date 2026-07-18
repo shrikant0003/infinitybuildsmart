@@ -87,6 +87,33 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-45% 0px -45% 0px' });
 sections.forEach(section => sectionObserver.observe(section));
 
+// Lightbox: click a plan drawing to view it full-size (scroll to read measurements)
+const planImgs = document.querySelectorAll('.plan-card img');
+if (planImgs.length) {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = '<img alt=""><span class="lightbox-hint">Scroll to inspect · Click anywhere or press Esc to close</span>';
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector('img');
+
+  planImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
+
 // Contact form (static hosting: no backend, so just confirm client-side)
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
