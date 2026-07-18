@@ -508,6 +508,17 @@ section{padding:90px 0;}
 }
 .ongoing-thumbs img:hover{transform:scale(1.05);box-shadow:var(--shadow);}
 
+.offer-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+.offer-chip{
+  background:rgba(224,138,44,0.12);
+  color:var(--amber-dark);
+  border:1px solid rgba(224,138,44,0.4);
+  font-weight:600;
+  font-size:0.82rem;
+  padding:6px 14px;
+  border-radius:999px;
+}
+
 /* Ongoing projects page */
 .page-banner{
   background:linear-gradient(120deg, var(--navy), var(--navy-light));
@@ -542,6 +553,22 @@ section{padding:90px 0;}
 .plan-card figcaption{padding:20px 24px 24px;}
 .plan-card h3{font-size:1.05rem;margin-bottom:6px;color:var(--navy);}
 .plan-card p{font-size:0.9rem;color:var(--gray-500);}
+.project-contact{background:var(--gray-50);}
+.project-contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.project-contact-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:28px;
+  border:1px solid var(--gray-200);
+  text-align:center;
+}
+.project-contact-card h3{font-size:1rem;margin-bottom:10px;color:var(--navy);}
+.project-contact-card p{color:var(--gray-700);font-size:0.94rem;line-height:1.8;}
+.project-contact-card a{color:var(--amber-dark);font-weight:600;}
 
 /* Team */
 .team-rows{
@@ -672,6 +699,7 @@ section{padding:90px 0;}
   .ongoing-info{padding:30px;}
   .plan-grid{grid-template-columns:1fr;}
   .plan-card img{height:340px;}
+  .project-contact-grid{grid-template-columns:1fr;}
   .team-row,.team-row--reverse{grid-template-columns:1fr;}
   .team-row--reverse .team-photo,.team-row--reverse .team-info{order:initial;}
   .team-photo{max-width:360px;margin:0 auto;}
