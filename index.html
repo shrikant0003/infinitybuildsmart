@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Infinity Construction & Developers | Build Safe, Build Smart</title>
-<meta name="description" content="Full-service construction partner in Belagavi covering residential, commercial, industrial, and institutional projects — structural engineering, architectural design, interiors, and renovation under one roof.">
+<meta name="description" content="Infinity Construction & Developers is Belagavi's full-service construction partner — structural engineering, architecture, interiors, and renovation delivered under one roof for residential, commercial, industrial, and institutional clients.">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="alternate icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,59 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- SPLASH SCREEN -->
+<div class="splash" id="splash">
+  <div class="splash-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" role="img" aria-label="Infinity Construction &amp; Developers logo">
+      <defs>
+        <style>
+          .logo-path{fill:none;stroke:#ffffff;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2200;stroke-dashoffset:2200;animation:drawLogo 1.6s cubic-bezier(0.4,0,0.2,1) forwards;}
+          .window{fill:#e08a2c;opacity:0;transform-origin:center;animation:popWindow .4s cubic-bezier(0.34,1.56,0.64,1) forwards;}
+          .window-1{animation-delay:1.05s;}
+          .window-2{animation-delay:1.15s;}
+          .window-3{animation-delay:1.25s;}
+          @keyframes drawLogo{0%{stroke-dashoffset:2200;}100%{stroke-dashoffset:0;}}
+          @keyframes popWindow{0%{opacity:0;transform:scale(0);}100%{opacity:1;transform:scale(1);}}
+          @media (prefers-reduced-motion: reduce){.logo-path{animation:none;stroke-dashoffset:0;}.window{animation:none;opacity:1;transform:scale(1);}}
+        </style>
+      </defs>
+      <path class="logo-path" d="
+        M 200,320
+        C 150,375 70,395 70,320
+        C 70,245 150,265 200,320
+        C 250,375 330,395 330,320
+        C 330,245 250,265 200,320
+        L 200,75
+        L 265,30
+        L 265,320
+        M 200,135
+        L 135,170
+        L 135,242
+      " />
+      <rect class="window window-1" x="223" y="90" width="18" height="12" rx="2" />
+      <rect class="window window-2" x="223" y="130" width="18" height="12" rx="2" />
+      <rect class="window window-3" x="223" y="170" width="18" height="12" rx="2" />
+    </svg>
+  </div>
+  <p class="splash-word">Infinity <em>Construction &amp; Developers</em></p>
+  <p class="splash-tagline">Build Safe, Build Smart</p>
+</div>
+<script>
+(function(){
+  var splash = document.getElementById('splash');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var navEntries = performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+  var isReload = navEntries.length ? navEntries[0].type === 'reload' : false;
+  var seenBefore = sessionStorage.getItem('infinitySplashSeen') === '1';
+  if (reduce || (seenBefore && !isReload)) {
+    splash.style.display = 'none';
+  } else {
+    document.documentElement.classList.add('splash-lock');
+    sessionStorage.setItem('infinitySplashSeen', '1');
+  }
+})();
+</script>
 
 <!-- ICON SPRITE -->
 <svg style="display:none" aria-hidden="true">
@@ -102,8 +155,8 @@
     <div class="container hero-content">
       <div class="hero-text-block">
         <p class="eyebrow"><span class="eyebrow-dash"></span>Trusted Construction &amp; Development Partner<span class="eyebrow-sep">·</span>Belagavi, Karnataka</p>
-        <h1>Transforming visions into reality with <span class="highlight">excellence and precision</span>.</h1>
-        <p class="hero-lead">From residential homes to commercial complexes, industrial facilities to interior fit-outs — we deliver structural integrity and design excellence across every type of build.</p>
+        <h1>Where structural precision meets <span class="highlight">architectural vision</span>.</h1>
+        <p class="hero-lead">Infinity Construction &amp; Developers brings structural engineering, architecture, and interiors together under one roof — delivering residential, commercial, industrial, and institutional projects built to last.</p>
       </div>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get Started</a>
@@ -132,20 +185,20 @@
     <div class="container about-grid">
       <div class="about-copy reveal">
         <p class="section-eyebrow">About Us</p>
-        <h2>Building relationships and communities with excellence — across every sector.</h2>
-        <p>At M/s. Infinity Construction &amp; Developers, we believe construction is more than just creating structures — it's about shaping lifestyles, strengthening communities, and building lasting relationships. Based in Belagavi, we've grown into a trusted name for structural, architectural, and interior work across residential, commercial, industrial, and institutional projects.</p>
-        <p>Founded and led by Mr. Sudheer R. Kinekar, an experienced architect and consultant, the company is built on integrity, precision, and forward-thinking design. Under his leadership, we've delivered projects spanning private homes, commercial complexes, and mixed-use developments — each one balancing aesthetic appeal with engineering excellence.</p>
-        <p>Our team of specialists — including Mr. Vijender Patil (Structural Consultant) and Mr. Ajith Pathak (Interior Designer) — brings together deep, complementary expertise across structural engineering, architectural planning, and interior design, so every project meets the highest standards of safety, durability, and finish.</p>
-        <p>Whatever the scale or sector — a single-family home, a multi-storey commercial building, an industrial facility, or a full interior renovation — we bring the same rigorous process: careful planning, transparent execution, and construction practices built for long-term value.</p>
+        <h2>A single, accountable partner for every stage of your build.</h2>
+        <p>M/s. Infinity Construction &amp; Developers is a Belagavi-based construction and development company delivering structural, architectural, and interior work across residential, commercial, industrial, and institutional projects. We hold every discipline in-house, so clients work with one accountable team from first sketch to final handover — not a chain of subcontractors.</p>
+        <p>The company is founded and led by Mr. Sudheer R. Kinekar, a practicing architect and consultant, whose approach to integrity, precision, and forward-thinking design shapes how every project is planned and delivered. Under his leadership, the firm has completed private residences, commercial complexes, and mixed-use developments that hold up equally to an architect's eye and an engineer's checklist.</p>
+        <p>That leadership is backed by specialist consultants — Mr. Vijender Patil on structural engineering and Mr. Ajith Pathak on interior design — whose complementary expertise means every project is reviewed for safety, durability, and finish before it's called complete.</p>
+        <p>Whatever the scale — a single-family home, a multi-storey commercial building, an industrial facility, or a full interior renovation — the process stays the same: careful planning, transparent execution, and construction practices built for long-term value.</p>
 
         <div class="vm-grid">
           <div class="vm-card">
             <h3>Vision</h3>
-            <p>To be a leading construction and development company known for excellence, transparency, and innovation — building spaces that inspire and endure.</p>
+            <p>To be Belagavi's benchmark construction and development company — recognized for excellence, transparency, and innovation in every space we build.</p>
           </div>
           <div class="vm-card">
             <h3>Mission</h3>
-            <p>To deliver superior construction services through ethical business practices, cutting-edge technology, and a customer-centric approach — ensuring every project reflects our motto: "Build Safe, Build Smart."</p>
+            <p>To deliver construction services through ethical business practices, modern engineering, and a customer-first approach — so every project reflects our motto: "Build Safe, Build Smart."</p>
           </div>
         </div>
       </div>
@@ -162,32 +215,32 @@
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-home"></use></svg></div>
           <h3>Residential Homes &amp; Apartments</h3>
-          <p>Custom homes, villas, and multi-unit residential buildings designed for comfortable, lasting living.</p>
+          <p>Individual homes, villas, and multi-unit apartment buildings designed around how families actually live.</p>
         </div>
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-building"></use></svg></div>
           <h3>Commercial &amp; Retail Spaces</h3>
-          <p>Offices, showrooms, and retail complexes engineered for functionality and business performance.</p>
+          <p>Offices, showrooms, and retail complexes engineered for footfall, functionality, and brand presence.</p>
         </div>
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-factory"></use></svg></div>
           <h3>Industrial &amp; Warehouse Facilities</h3>
-          <p>Robust industrial structures and storage facilities built to withstand demanding operational needs.</p>
+          <p>Load-bearing industrial structures and storage facilities engineered for demanding operational use.</p>
         </div>
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-school"></use></svg></div>
           <h3>Institutional Buildings</h3>
-          <p>Educational, healthcare, and institutional spaces planned for safety, accessibility, and durability.</p>
+          <p>Educational and healthcare facilities planned to statutory safety, accessibility, and durability standards.</p>
         </div>
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-city"></use></svg></div>
           <h3>Mixed-Use Developments</h3>
-          <p>Integrated developments that combine residential, commercial, and community spaces seamlessly.</p>
+          <p>Integrated developments that bring residential, commercial, and community spaces together on one site.</p>
         </div>
         <div class="cap-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-roller"></use></svg></div>
           <h3>Interior Fit-Outs &amp; Renovations</h3>
-          <p>Complete interior execution and renovation work that transforms existing spaces into modern environments.</p>
+          <p>Full interior execution and structural renovation that brings existing spaces up to modern standards.</p>
         </div>
       </div>
     </div>
@@ -202,48 +255,48 @@
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-building"></use></svg></div>
-          <h3>Commercial Projects</h3>
-          <p>Building robust commercial spaces that drive business success.</p>
+          <h3>Commercial Construction</h3>
+          <p>End-to-end delivery of offices, showrooms, and retail spaces, built for durability and business performance.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-home"></use></svg></div>
           <h3>Residential Construction</h3>
-          <p>Creating dream homes with quality craftsmanship and attention to detail.</p>
+          <p>Homes built with quality materials, skilled craftsmanship, and close attention to every finishing detail.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-city"></use></svg></div>
           <h3>Real Estate Development</h3>
-          <p>Developing sustainable communities with modern infrastructure.</p>
+          <p>Planning and executing residential and mixed-use developments built for liveability and lasting value.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-compass"></use></svg></div>
           <h3>Architectural Design</h3>
-          <p>Innovative designs that blend aesthetics with functionality.</p>
+          <p>Concept-to-construction design that balances aesthetics, functionality, and buildability.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-hammer"></use></svg></div>
           <h3>Renovation &amp; Remodeling</h3>
-          <p>Breathing new life into existing structures with expert renovations.</p>
+          <p>Structural upgrades, extensions, and remodeling that modernize existing properties without compromising safety.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-clipboard"></use></svg></div>
           <h3>Project Management</h3>
-          <p>End-to-end project oversight ensuring timely and quality delivery.</p>
+          <p>Scheduling, vendor coordination, and quality control managed in-house from groundbreaking to handover.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-bolt"></use></svg></div>
           <h3>Electrical &amp; Civil Works</h3>
-          <p>Comprehensive solutions for all electrical and civil engineering needs.</p>
+          <p>In-house electrical and civil engineering teams handling wiring, plumbing, and site infrastructure to code.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-droplet"></use></svg></div>
           <h3>Water Treatment</h3>
-          <p>STP/ETP design, installation, and operation for residential and industrial clients.</p>
+          <p>STP/ETP design, installation, and commissioning for sustainable water management on any site.</p>
         </div>
         <div class="service-card reveal">
           <div class="icon-badge"><svg class="icon"><use href="#icon-roller"></use></svg></div>
           <h3>Interiors</h3>
-          <p>Design and execution of interior spaces that reflect your style and needs.</p>
+          <p>Interior design and fit-out execution, from space planning to final finishes, tailored to how you live and work.</p>
         </div>
       </div>
     </div>
@@ -258,32 +311,32 @@
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-users"></use></svg></div>
           <h3>Experienced Leadership</h3>
-          <p>Led by a qualified architect and specialist consultants, hands-on in every project.</p>
+          <p>A qualified architect and specialist consultants stay hands-on from planning through handover.</p>
         </div>
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-shield"></use></svg></div>
           <h3>Safety-First Practices</h3>
-          <p>Every site follows strict safety protocols and quality checks from foundation to finish.</p>
+          <p>Every site follows strict safety protocols and structured quality checks, from foundation to finish.</p>
         </div>
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-clock"></use></svg></div>
           <h3>Timely Delivery</h3>
-          <p>Structured project management keeps timelines realistic and commitments on track.</p>
+          <p>Structured project scheduling keeps timelines realistic and commitments on track, phase by phase.</p>
         </div>
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-cpu"></use></svg></div>
           <h3>Modern Construction Practices</h3>
-          <p>We adopt current construction techniques and technology to improve efficiency and durability.</p>
+          <p>Current construction techniques and technology, applied to improve efficiency and long-term durability.</p>
         </div>
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-receipt"></use></svg></div>
           <h3>Transparent Process</h3>
-          <p>Clear communication on scope, timelines, and costs — no surprises along the way.</p>
+          <p>Clear communication on scope, timelines, and costs, with no surprises along the way.</p>
         </div>
         <div class="why-card reveal">
           <div class="icon-badge icon-badge--navy"><svg class="icon"><use href="#icon-clipboard"></use></svg></div>
           <h3>End-to-End Management</h3>
-          <p>From design to handover, we manage every phase so you don't have to coordinate multiple vendors.</p>
+          <p>One team manages design through handover, so you're not coordinating separate vendors yourself.</p>
         </div>
       </div>
     </div>
@@ -298,22 +351,22 @@
         <div class="process-step reveal">
           <span class="process-num">01</span>
           <h3>Consultation &amp; Site Assessment</h3>
-          <p>We understand your requirements, budget, and site conditions to shape a realistic plan.</p>
+          <p>We assess your requirements, budget, and site conditions to shape a plan that's realistic from day one.</p>
         </div>
         <div class="process-step reveal">
           <span class="process-num">02</span>
           <h3>Design &amp; Planning</h3>
-          <p>Our architects and structural consultants translate requirements into detailed, buildable designs.</p>
+          <p>Our architects and structural consultants translate requirements into detailed, buildable drawings.</p>
         </div>
         <div class="process-step reveal">
           <span class="process-num">03</span>
           <h3>Construction &amp; Execution</h3>
-          <p>Skilled teams execute with regular quality checks, safety oversight, and progress updates.</p>
+          <p>Skilled crews execute on-site, backed by regular quality checks, safety oversight, and progress updates.</p>
         </div>
         <div class="process-step reveal">
           <span class="process-num">04</span>
           <h3>Handover &amp; Support</h3>
-          <p>We complete final inspections and remain available for post-handover support.</p>
+          <p>We complete final inspections and stay available for support well after keys are handed over.</p>
         </div>
       </div>
     </div>
@@ -391,7 +444,7 @@
         </div>
         <div class="ongoing-info">
           <h3>Golden Crown — Shahunagar, Belagavi</h3>
-          <p>Premium residential apartments with spacious, Vastu-compliant 2BHK flats now open for booking — with a dedicated amenity floor featuring a gym, landscaped garden, and convention hall. Bank loan facility available. See the full floor plans and renderings on the project page.</p>
+          <p>Premium, Vastu-compliant 2BHK apartments now open for booking, with a dedicated amenity floor featuring a gym, landscaped garden, and convention hall. Bank loan facility available. View the full floor plans and renderings on the project page.</p>
           <a href="ongoing-projects.html" class="btn btn-primary">View Project Details</a>
         </div>
       </div>
@@ -410,7 +463,7 @@
           </div>
           <div class="team-info">
             <h3>Architect &amp; Consultant — Mr. Sudheer R. Kinekar</h3>
-            <p><strong>Mr. Sudheer R. Kinekar</strong>, Founder and Principal Consultant at <strong>Infinity Construction &amp; Developers</strong>, is the guiding force behind the company's vision and excellence. With extensive experience in architecture and project planning, he combines innovation, functionality, and sustainability to deliver designs that balance aesthetics with structural integrity. His leadership and commitment to quality have been instrumental in shaping Infinity's reputation as a trusted name in construction and development.</p>
+            <p><strong>Mr. Sudheer R. Kinekar</strong> is the Founder and Principal Consultant of <strong>Infinity Construction &amp; Developers</strong>, and the guiding force behind the company's approach to design and delivery. Drawing on extensive experience in architecture and project planning, he balances innovation, functionality, and sustainability with structural integrity in every design. His leadership and commitment to quality have shaped Infinity's reputation as a trusted name in construction and development.</p>
           </div>
         </div>
         <div class="team-row team-row--reverse reveal">
@@ -419,7 +472,7 @@
           </div>
           <div class="team-info">
             <h3>Structural Consultant — Mr. Vijender Patil</h3>
-            <p>At <strong>Infinity Construction &amp; Developers</strong>, <strong>Mr. Vijender Patil</strong> serves as our trusted structural consultant, ensuring every project is built on precision, safety, and strength. With deep expertise in modern design and engineering standards, he delivers structural solutions that are efficient, durable, and built to exceed quality expectations.</p>
+            <p><strong>Mr. Vijender Patil</strong> serves as structural consultant to <strong>Infinity Construction &amp; Developers</strong>, ensuring every project is built on precision, safety, and strength. With deep expertise in modern design and engineering standards, he delivers structural solutions that are efficient, durable, and built to exceed quality expectations.</p>
           </div>
         </div>
         <div class="team-row reveal">
@@ -428,7 +481,7 @@
           </div>
           <div class="team-info">
             <h3>Interior Designer — Mr. Ajith Pathak</h3>
-            <p>At <strong>Infinity Construction &amp; Developers</strong>, <strong>Mr. Ajith Pathak</strong> brings creativity and precision together to craft interiors that are both functional and inspiring. With a keen eye for detail and a passion for modern design, he transforms spaces into elegant, comfortable environments that reflect our clients' lifestyles and aspirations.</p>
+            <p><strong>Mr. Ajith Pathak</strong> leads interior design at <strong>Infinity Construction &amp; Developers</strong>, bringing creativity and precision together to craft spaces that are both functional and inspiring. With a keen eye for detail and a passion for modern design, he turns interiors into elegant, comfortable environments that reflect each client's lifestyle and aspirations.</p>
           </div>
         </div>
       </div>
@@ -439,7 +492,7 @@
   <section class="cta-banner">
     <div class="container cta-inner reveal">
       <h2>Ready to build your vision with us?</h2>
-      <p>Residential, commercial, industrial, or interior — let's talk about your next project.</p>
+      <p>Residential, commercial, industrial, or interior — tell us what you're building and we'll take it from there.</p>
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
     </div>
   </section>
@@ -450,7 +503,7 @@
       <div class="contact-info reveal">
         <p class="section-eyebrow">Get in touch</p>
         <h2>Let's discuss your project</h2>
-        <p>Have a project in mind or just want to know more about our services? Reach out and our team will get back to you.</p>
+        <p>Have a project in mind, or want to know more about how we work? Send us a message and our team will get back to you.</p>
         <ul class="contact-list">
           <li><strong>Email:</strong> <a href="mailto:infinitydevelopers.bgm@gmail.com">infinitydevelopers.bgm@gmail.com</a></li>
           <li><strong>Phone:</strong> <a href="tel:+917507321994">+91 75073 21994</a></li>
@@ -458,6 +511,8 @@
         </ul>
       </div>
       <form class="contact-form reveal" id="contactForm">
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
+
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -499,6 +554,8 @@
 
 <a href="tel:+917507321994" class="floating-call" aria-label="Call us">&#128222;</a>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init({ publicKey: "YOUR_EMAILJS_PUBLIC_KEY" });</script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Golden Crown — Ongoing Project | Infinity Construction & Developers</title>
-<meta name="description" content="Golden Crown by Infinity Construction & Developers — premium residential apartments with spacious 2BHK flats at Shahunagar, Belagavi. Floor plans, amenities, and booking details.">
+<meta name="description" content="Golden Crown by Infinity Construction & Developers — premium, Vastu-compliant 2BHK apartments at Shahunagar, Belagavi. Explore floor plans, amenities, and booking details.">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="alternate icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,59 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- SPLASH SCREEN -->
+<div class="splash" id="splash">
+  <div class="splash-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" role="img" aria-label="Infinity Construction &amp; Developers logo">
+      <defs>
+        <style>
+          .logo-path{fill:none;stroke:#ffffff;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2200;stroke-dashoffset:2200;animation:drawLogo 1.6s cubic-bezier(0.4,0,0.2,1) forwards;}
+          .window{fill:#e08a2c;opacity:0;transform-origin:center;animation:popWindow .4s cubic-bezier(0.34,1.56,0.64,1) forwards;}
+          .window-1{animation-delay:1.05s;}
+          .window-2{animation-delay:1.15s;}
+          .window-3{animation-delay:1.25s;}
+          @keyframes drawLogo{0%{stroke-dashoffset:2200;}100%{stroke-dashoffset:0;}}
+          @keyframes popWindow{0%{opacity:0;transform:scale(0);}100%{opacity:1;transform:scale(1);}}
+          @media (prefers-reduced-motion: reduce){.logo-path{animation:none;stroke-dashoffset:0;}.window{animation:none;opacity:1;transform:scale(1);}}
+        </style>
+      </defs>
+      <path class="logo-path" d="
+        M 200,320
+        C 150,375 70,395 70,320
+        C 70,245 150,265 200,320
+        C 250,375 330,395 330,320
+        C 330,245 250,265 200,320
+        L 200,75
+        L 265,30
+        L 265,320
+        M 200,135
+        L 135,170
+        L 135,242
+      " />
+      <rect class="window window-1" x="223" y="90" width="18" height="12" rx="2" />
+      <rect class="window window-2" x="223" y="130" width="18" height="12" rx="2" />
+      <rect class="window window-3" x="223" y="170" width="18" height="12" rx="2" />
+    </svg>
+  </div>
+  <p class="splash-word">Infinity <em>Construction &amp; Developers</em></p>
+  <p class="splash-tagline">Build Safe, Build Smart</p>
+</div>
+<script>
+(function(){
+  var splash = document.getElementById('splash');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var navEntries = performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+  var isReload = navEntries.length ? navEntries[0].type === 'reload' : false;
+  var seenBefore = sessionStorage.getItem('infinitySplashSeen') === '1';
+  if (reduce || (seenBefore && !isReload)) {
+    splash.style.display = 'none';
+  } else {
+    document.documentElement.classList.add('splash-lock');
+    sessionStorage.setItem('infinitySplashSeen', '1');
+  }
+})();
+</script>
 
 <!-- ICON SPRITE -->
 <svg style="display:none" aria-hidden="true">
@@ -73,8 +126,8 @@
   <section class="page-banner">
     <div class="container">
       <p class="section-eyebrow">Ongoing Projects</p>
-      <h1>Golden Crown — Simple Way To Life</h1>
-      <p class="page-banner-sub">Premium residential apartments with spacious 2BHK flats at Shahunagar, Belagavi. Now open for booking.</p>
+      <h1>Golden Crown — A Simpler Way to Live</h1>
+      <p class="page-banner-sub">Premium, Vastu-compliant 2BHK apartments at Shahunagar, Belagavi — now open for booking.</p>
     </div>
   </section>
 
@@ -88,7 +141,7 @@
         </div>
         <div class="ongoing-info">
           <h3>Golden Crown — Shahunagar, Belagavi</h3>
-          <p>A premium multi-storey residential apartment with spacious, Vastu-compliant 2BHK flats across four typical floors, topped with a dedicated amenity floor — gym, landscaped garden with a water feature, and a resident convention hall. Ground-level covered parking, lift with power backup, and a manned security cabin complete the design.</p>
+          <p>A multi-storey residential building offering spacious, Vastu-compliant 2BHK homes across four typical floors, topped with a dedicated amenity floor for a gym, landscaped garden with a water feature, and a resident convention hall. Ground-level covered parking, a lift with power backup, and a manned security cabin round out the design.</p>
           <div class="offer-chips">
             <span class="offer-chip">Bank Loan Facility Available</span>
             <span class="offer-chip">Free Kitchen Trolley on Booking</span>
@@ -177,7 +230,7 @@
   <section class="cta-banner">
     <div class="container cta-inner">
       <h2>Book your 2BHK at Golden Crown</h2>
-      <p>Get in touch for availability, pricing, and site visits.</p>
+      <p>Contact us for current availability, pricing, and to schedule a site visit.</p>
       <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
     </div>
   </section>

@@ -1,3 +1,24 @@
+// Splash screen: fade out once the animation has played and the page has loaded
+const splash = document.getElementById('splash');
+if (splash && document.documentElement.classList.contains('splash-lock')) {
+  const MIN_DISPLAY = 2850;
+  const start = performance.now();
+  let hidden = false;
+  const hideSplash = () => {
+    if (hidden) return;
+    hidden = true;
+    const wait = Math.max(MIN_DISPLAY - (performance.now() - start), 0);
+    setTimeout(() => {
+      splash.classList.add('splash-hide');
+      document.documentElement.classList.remove('splash-lock');
+      splash.addEventListener('transitionend', () => splash.remove(), { once: true });
+    }, wait);
+  };
+  if (document.readyState === 'complete') hideSplash();
+  else window.addEventListener('load', hideSplash);
+  setTimeout(hideSplash, 5000); // safety net if load never fires
+}
+
 // Sticky header background on scroll
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
@@ -55,6 +76,20 @@ if (heroSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce
 
 // Scroll-reveal animation
 const revealEls = document.querySelectorAll('.reveal');
+
+// Stagger siblings that reveal together (e.g. cards in the same grid)
+const revealGroups = new Map();
+revealEls.forEach(el => {
+  const group = revealGroups.get(el.parentElement) || [];
+  group.push(el);
+  revealGroups.set(el.parentElement, group);
+});
+revealGroups.forEach(group => {
+  group.forEach((el, i) => {
+    el.style.transitionDelay = `${Math.min(i, 6) * 90}ms`;
+  });
+});
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -114,14 +149,32 @@ if (planImgs.length) {
   });
 }
 
-// Contact form (static hosting: no backend, so just confirm client-side)
+// Contact form — submits via EmailJS (works from static hosting, emails infinitydevelopers.bgm@gmail.com)
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // Honeypot: bots fill every field, real visitors never see or check this one
+    if (form.botcheck.checked) {
+      formNote.textContent = 'Thanks! We\'ve received your message and will get back to you soon.';
+      form.reset();
+      return;
+    }
+
     const name = document.getElementById('name').value.trim();
-    formNote.textContent = `Thanks${name ? ', ' + name : ''}! To finish sending this, connect the form to Formspree/EmailJS or Hostinger's form handler — see deployment notes.`;
-    form.reset();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    formNote.textContent = 'Sending...';
+    try {
+      await emailjs.sendForm('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', form);
+      formNote.textContent = `Thanks${name ? ', ' + name : ''}! We've received your message and will get back to you soon.`;
+      form.reset();
+    } catch (err) {
+      formNote.textContent = 'Something went wrong sending your message. Please email us directly at infinitydevelopers.bgm@gmail.com.';
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 }
